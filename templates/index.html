@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Trends Scraper</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .results {
+        margin-top: 20px;
+        display: none;
+      }
+      .trend {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #f5f8fa;
+        border-radius: 5px;
+      }
+      .metadata {
+        font-size: 0.9em;
+        color: #657786;
+        margin-top: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #1da1f2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:disabled {
+        background-color: #aaa;
+      }
+      .loading {
+        display: none;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Twitter Trends Scraper</h1>
+    <button id="scrapeBtn">Scrape Trending Topics</button>
+    <div class="loading">Scraping trends...</div>
+
+    <div class="results">
+      <h2>Latest Results</h2>
+      <div id="trends"></div>
+      <div class="metadata">
+        <p>Scan ID: <span id="scanId"></span></p>
+        <p>Timestamp: <span id="timestamp"></span></p>
+        <p>IP Address: <span id="ipAddress"></span></p>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#scrapeBtn").click(function () {
+          const btn = $(this);
+          btn.prop("disabled", true);
+          $(".loading").show();
+          $(".results").hide();
+
+          $.ajax({
+            url: "/scrape",
+            method: "POST",
+            success: function (response) {
+              if (response.status === "success") {
+                const trends = response.data.trends;
+                let trendsHtml = "";
+
+                trends.forEach((trend, index) => {
+                  if (trend) {
+                    trendsHtml += `
+                                        <div class="trend">
+                                            <strong>${
+                                              index + 1
+                                            }.</strong> ${trend}
+                                        </div>
+                                    `;
+                  }
+                });
+
+                $("#trends").html(trendsHtml);
+                $("#scanId").text(response.data.id);
+                $("#timestamp").text(response.data.timestamp);
+                $("#ipAddress").text(response.data.ip);
+                $(".results").show();
+              } else {
+                alert("Error: " + response.message);
+              }
+            },
+            error: function () {
+              alert("An error occurred while scraping trends.");
+            },
+            complete: function () {
+              btn.prop("disabled", false);
+              $(".loading").hide();
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
