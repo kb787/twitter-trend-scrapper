@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: flask-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: MONGODB_URI
+        value: "mongodb+srv://KaranBhanushali:Kb19092003%40@cluster0.iro6b.mongodb.net/twitter_scrapping_app"
+      - key: TWITTER_USERNAME
+        value: "freakywebdev"
+      - key: TWITTER_PASSWORD
+        value: "Kb19092003@"
+      - key: TWITTER_EMAIL
+        value: "freakywebdev@gmail.com"
+      - key: PROXYMESH_URL
+        value: "http://kb787:Kb19092003@@us-ca.proxymesh.com:31280"
+      - key: PROXYMESH_USERNAME
+        value: "kb787"
+      - key: PROXYMESH_PASSWORD
+        value: "Kb19092003@"
+      - key: ALLOWED_IP
+        value: 110.224.114.4
