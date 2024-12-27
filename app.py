@@ -60,7 +60,9 @@ class TwitterScraper:
             options.add_argument("--disable-blink-features=AutomationControlled")
             options.add_argument("--disable-extensions")  # Added
             options.add_argument("--remote-debugging-port=9222")  # Added for debugging
-            options.binary_location = self.chrome_path
+            options.binary_location = (
+                r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+            )
 
             # Additional logging for debugging
             logger.info("Setting up Chrome driver with options")
