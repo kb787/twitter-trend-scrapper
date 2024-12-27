@@ -99,3 +99,131 @@ the `browser_executable_path='c:/path/to/your/browser.exe` parameter.
 
 2024-12-28 01:03:55,738 - INFO - 127.0.0.1 - - [28/Dec/2024 01:03:55] "[35m[1mPOST /scrape HTTP/1.1[0m" 500 -
 2024-12-28 01:05:39,830 - INFO -  * Detected change in 'D:\\stir-web-scrapping-task\\app.py', reloading
+2024-12-28 01:05:41,617 - WARNING -  * Debugger is active!
+2024-12-28 01:05:41,621 - INFO -  * Debugger PIN: 130-659-414
+2024-12-28 01:05:44,403 - INFO - Starting scraping process
+2024-12-28 01:05:44,405 - INFO - Setting up Chrome driver with options
+2024-12-28 01:05:44,406 - INFO - Chrome option: --no-sandbox
+2024-12-28 01:05:44,407 - INFO - Chrome option: --disable-dev-shm-usage
+2024-12-28 01:05:44,408 - INFO - Chrome option: --disable-gpu
+2024-12-28 01:05:44,410 - INFO - Chrome option: --headless
+2024-12-28 01:05:44,413 - INFO - Chrome option: --window-size=1920,1080
+2024-12-28 01:05:44,415 - INFO - Chrome option: --start-maximized
+2024-12-28 01:05:44,416 - INFO - Chrome option: --disable-blink-features=AutomationControlled
+2024-12-28 01:05:44,417 - INFO - Chrome option: --disable-extensions
+2024-12-28 01:05:44,418 - INFO - Chrome option: --remote-debugging-port=9222
+2024-12-28 01:05:46,261 - INFO - patching driver executable C:\Users\Admin\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2024-12-28 01:05:47,616 - INFO - Chrome driver setup successful
+2024-12-28 01:05:47,617 - INFO - Attempting Twitter login
+2024-12-28 01:05:56,758 - INFO - Screenshot saved: screenshots\login_page_20241228_010556.png
+2024-12-28 01:05:56,759 - INFO - Waiting for element: name=text
+2024-12-28 01:05:57,772 - INFO - Element found: name=text
+2024-12-28 01:05:59,988 - INFO - Waiting for element: xpath=//span[text()='Next']
+2024-12-28 01:06:01,045 - INFO - Element found: xpath=//span[text()='Next']
+2024-12-28 01:06:04,438 - INFO - Waiting for element: name=text
+2024-12-28 01:06:05,449 - INFO - Element found: name=text
+2024-12-28 01:06:05,580 - INFO - Waiting for element: xpath=//span[text()='Next']
+2024-12-28 01:06:06,589 - INFO - Element found: xpath=//span[text()='Next']
+2024-12-28 01:06:09,662 - INFO - Waiting for element: name=password
+2024-12-28 01:06:10,688 - INFO - Element found: name=password
+2024-12-28 01:06:12,808 - INFO - Waiting for element: xpath=//span[text()='Log in']
+2024-12-28 01:06:13,820 - INFO - Element found: xpath=//span[text()='Log in']
+2024-12-28 01:06:23,963 - INFO - Successfully logged into Twitter
+2024-12-28 01:06:23,964 - INFO - Waiting for element: xpath=//a[@aria-label='Home']
+2024-12-28 01:06:24,987 - INFO - Element found: xpath=//a[@aria-label='Home']
+2024-12-28 01:06:24,987 - INFO - Login verification successful
+2024-12-28 01:06:24,987 - INFO - Navigating to Twitter explore page
+2024-12-28 01:06:30,988 - INFO - Attempting to fetch trends (retry 1/3)
+2024-12-28 01:06:31,029 - INFO - Found 38 trend containers
+2024-12-28 01:06:31,054 - WARNING - Error processing trend container: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//span[@dir='ltr']"}
+  (Session info: chrome=131.0.6778.205); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x003AEC13+23731]
+	(No symbol) [0x0033C394]
+	(No symbol) [0x0021BE63]
+	(No symbol) [0x0025FCE6]
+	(No symbol) [0x0025FF2B]
+	(No symbol) [0x00255A81]
+	(No symbol) [0x00281EA4]
+	(No symbol) [0x002559A4]
+	(No symbol) [0x002820F4]
+	(No symbol) [0x0029B46E]
+	(No symbol) [0x00281BF6]
+	(No symbol) [0x00253F35]
+	(No symbol) [0x00254EBD]
+	GetHandleVerifier [0x0068F0D3+3039603]
+	GetHandleVerifier [0x006A2DEA+3120778]
+	GetHandleVerifier [0x0069B592+3089970]
+	GetHandleVerifier [0x004443B0+635984]
+	(No symbol) [0x00344DCD]
+	(No symbol) [0x00342068]
+	(No symbol) [0x00342205]
+	(No symbol) [0x00334FD0]
+	BaseThreadInitThunk [0x767500C9+25]
+	RtlGetAppContainerNamedObjectPath [0x774C7B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x774C7AEE+238]
+
+2024-12-28 01:06:31,250 - INFO - Added trend: #KhanSir
+2024-12-28 01:06:31,278 - INFO - Added trend: #PriyankaChopra
+2024-12-28 01:06:31,288 - WARNING - Error processing trend container: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//span[@dir='ltr']"}
+  (Session info: chrome=131.0.6778.205); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x003AEC13+23731]
+	(No symbol) [0x0033C394]
+	(No symbol) [0x0021BE63]
+	(No symbol) [0x0025FCE6]
+	(No symbol) [0x0025FF2B]
+	(No symbol) [0x00255A81]
+	(No symbol) [0x00281EA4]
+	(No symbol) [0x002559A4]
+	(No symbol) [0x002820F4]
+	(No symbol) [0x0029B46E]
+	(No symbol) [0x00281BF6]
+	(No symbol) [0x00253F35]
+	(No symbol) [0x00254EBD]
+	GetHandleVerifier [0x0068F0D3+3039603]
+	GetHandleVerifier [0x006A2DEA+3120778]
+	GetHandleVerifier [0x0069B592+3089970]
+	GetHandleVerifier [0x004443B0+635984]
+	(No symbol) [0x00344DCD]
+	(No symbol) [0x00342068]
+	(No symbol) [0x00342205]
+	(No symbol) [0x00334FD0]
+	BaseThreadInitThunk [0x767500C9+25]
+	RtlGetAppContainerNamedObjectPath [0x774C7B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x774C7AEE+238]
+
+2024-12-28 01:06:31,318 - INFO - Added trend: #BiggBoss18
+2024-12-28 01:06:31,327 - WARNING - Error processing trend container: Message: no such element: Unable to locate element: {"method":"xpath","selector":".//span[@dir='ltr']"}
+  (Session info: chrome=131.0.6778.205); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x003AEC13+23731]
+	(No symbol) [0x0033C394]
+	(No symbol) [0x0021BE63]
+	(No symbol) [0x0025FCE6]
+	(No symbol) [0x0025FF2B]
+	(No symbol) [0x00255A81]
+	(No symbol) [0x00281EA4]
+	(No symbol) [0x002559A4]
+	(No symbol) [0x002820F4]
+	(No symbol) [0x0029B46E]
+	(No symbol) [0x00281BF6]
+	(No symbol) [0x00253F35]
+	(No symbol) [0x00254EBD]
+	GetHandleVerifier [0x0068F0D3+3039603]
+	GetHandleVerifier [0x006A2DEA+3120778]
+	GetHandleVerifier [0x0069B592+3089970]
+	GetHandleVerifier [0x004443B0+635984]
+	(No symbol) [0x00344DCD]
+	(No symbol) [0x00342068]
+	(No symbol) [0x00342205]
+	(No symbol) [0x00334FD0]
+	BaseThreadInitThunk [0x767500C9+25]
+	RtlGetAppContainerNamedObjectPath [0x774C7B1E+286]
+	RtlGetAppContainerNamedObjectPath [0x774C7AEE+238]
+
+2024-12-28 01:06:31,353 - INFO - Added trend: #DelhiRains
+2024-12-28 01:06:31,380 - INFO - Added trend: #ShameOnYouStalin
+2024-12-28 01:06:31,938 - INFO - Successfully saved trending topics
+2024-12-28 01:06:32,379 - INFO - Scraping completed successfully
+2024-12-28 01:06:32,379 - INFO - 127.0.0.1 - - [28/Dec/2024 01:06:32] "POST /scrape HTTP/1.1" 200 -
