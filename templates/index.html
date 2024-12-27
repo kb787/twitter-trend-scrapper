@@ -45,8 +45,7 @@
     </style>
   </head>
   <body>
-    <h1>Twitter Trends Scraper</h1>
-    <button id="scrapeBtn">Scrape Trending Topics</button>
+    <button id="scrapeBtn">Click here to run the script</button>
     <div class="loading">Scraping trends...</div>
 
     <div class="results">
@@ -76,15 +75,13 @@
                 let trendsHtml = "";
 
                 trends.forEach((trend, index) => {
-                  if (trend) {
-                    trendsHtml += `
-                                        <div class="trend">
-                                            <strong>${
-                                              index + 1
-                                            }.</strong> ${trend}
-                                        </div>
-                                    `;
+                  trendsHtml += `
+                                    <div class="trend">
+                                        <strong>${index + 1}.</strong> ${
+                    trend.trend_text
                   }
+                                    </div>
+                                `;
                 });
 
                 $("#trends").html(trendsHtml);
