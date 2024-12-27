@@ -1,0 +1,101 @@
+2024-12-28 01:03:51,435 - WARNING -  * Debugger is active!
+2024-12-28 01:03:51,441 - INFO -  * Debugger PIN: 130-659-414
+2024-12-28 01:03:53,947 - INFO - Starting scraping process
+2024-12-28 01:03:53,948 - INFO - Setting up Chrome driver with options
+2024-12-28 01:03:53,948 - INFO - Chrome option: --no-sandbox
+2024-12-28 01:03:53,949 - INFO - Chrome option: --disable-dev-shm-usage
+2024-12-28 01:03:53,949 - INFO - Chrome option: --disable-gpu
+2024-12-28 01:03:53,949 - INFO - Chrome option: --headless
+2024-12-28 01:03:53,950 - INFO - Chrome option: --window-size=1920,1080
+2024-12-28 01:03:53,950 - INFO - Chrome option: --start-maximized
+2024-12-28 01:03:53,950 - INFO - Chrome option: --disable-blink-features=AutomationControlled
+2024-12-28 01:03:53,965 - INFO - Chrome option: --disable-extensions
+2024-12-28 01:03:53,965 - INFO - Chrome option: --remote-debugging-port=9222
+2024-12-28 01:03:55,615 - INFO - patching driver executable C:\Users\Admin\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2024-12-28 01:03:55,700 - ERROR - Driver setup failed: 
+---------------------
+Could not determine browser executable.
+---------------------
+Make sure your browser is installed in the default location (path).
+If you are sure about the browser executable, you can specify it using
+the `browser_executable_path='c:/path/to/your/browser.exe` parameter.
+
+
+2024-12-28 01:03:55,707 - ERROR - Error traceback: Traceback (most recent call last):
+  File "D:\stir-web-scrapping-task\app.py", line 368, in setup_driver
+    driver = uc.Chrome(options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\undetected_chromedriver\__init__.py", line 378, in __init__
+    raise FileNotFoundError(
+FileNotFoundError: 
+---------------------
+Could not determine browser executable.
+---------------------
+Make sure your browser is installed in the default location (path).
+If you are sure about the browser executable, you can specify it using
+the `browser_executable_path='c:/path/to/your/browser.exe` parameter.
+
+
+
+2024-12-28 01:03:55,711 - ERROR - Error getting trending topics: 
+---------------------
+Could not determine browser executable.
+---------------------
+Make sure your browser is installed in the default location (path).
+If you are sure about the browser executable, you can specify it using
+the `browser_executable_path='c:/path/to/your/browser.exe` parameter.
+
+
+2024-12-28 01:03:55,714 - ERROR - Error type: FileNotFoundError
+2024-12-28 01:03:55,716 - ERROR - Error traceback: Traceback (most recent call last):
+  File "D:\stir-web-scrapping-task\app.py", line 487, in get_trending_topics
+    driver = self.setup_driver()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\stir-web-scrapping-task\app.py", line 368, in setup_driver
+    driver = uc.Chrome(options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\undetected_chromedriver\__init__.py", line 378, in __init__
+    raise FileNotFoundError(
+FileNotFoundError: 
+---------------------
+Could not determine browser executable.
+---------------------
+Make sure your browser is installed in the default location (path).
+If you are sure about the browser executable, you can specify it using
+the `browser_executable_path='c:/path/to/your/browser.exe` parameter.
+
+
+
+2024-12-28 01:03:55,720 - ERROR - Error scraping Twitter: 
+---------------------
+Could not determine browser executable.
+---------------------
+Make sure your browser is installed in the default location (path).
+If you are sure about the browser executable, you can specify it using
+the `browser_executable_path='c:/path/to/your/browser.exe` parameter.
+
+
+2024-12-28 01:03:55,723 - ERROR - Error traceback: Traceback (most recent call last):
+  File "D:\stir-web-scrapping-task\app.py", line 598, in scrape
+    result = scraper.get_trending_topics()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\stir-web-scrapping-task\app.py", line 487, in get_trending_topics
+    driver = self.setup_driver()
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\stir-web-scrapping-task\app.py", line 368, in setup_driver
+    driver = uc.Chrome(options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\undetected_chromedriver\__init__.py", line 378, in __init__
+    raise FileNotFoundError(
+FileNotFoundError: 
+---------------------
+Could not determine browser executable.
+---------------------
+Make sure your browser is installed in the default location (path).
+If you are sure about the browser executable, you can specify it using
+the `browser_executable_path='c:/path/to/your/browser.exe` parameter.
+
+
+
+2024-12-28 01:03:55,738 - INFO - 127.0.0.1 - - [28/Dec/2024 01:03:55] "[35m[1mPOST /scrape HTTP/1.1[0m" 500 -
+2024-12-28 01:05:39,830 - INFO -  * Detected change in 'D:\\stir-web-scrapping-task\\app.py', reloading
