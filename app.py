@@ -12,7 +12,7 @@ import logging
 import time
 import os
 import json
-import traceback  # Added for detailed error tracking
+import traceback
 from dotenv import load_dotenv
 from pymongo import MongoClient
 from flask import Flask, render_template, jsonify
@@ -22,7 +22,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler("logs/app.log"),  # Added file handler
+        logging.FileHandler("logs/app.log"),
         logging.StreamHandler(),
     ],
 )
@@ -54,20 +54,22 @@ class TwitterScraper:
             options.add_argument("--no-sandbox")
             options.add_argument("--disable-dev-shm-usage")
             options.add_argument("--disable-gpu")
-            options.add_argument("--headless")  # Added for headless mode
+            options.add_argument("--headless")
             options.add_argument("--window-size=1920,1080")
             options.add_argument("--start-maximized")
             options.add_argument("--disable-blink-features=AutomationControlled")
-            options.add_argument("--disable-extensions")  # Added
-            options.add_argument("--remote-debugging-port=9222")  # Added for debugging
-            options.binary_location = self.chrome_path
+            options.add_argument("--disable-extensions")
+            options.add_argument("--remote-debugging-port=9222")
 
-            # Additional logging for debugging
-            logger.info("Setting up Chrome driver with options")
-            for arg in options.arguments:
-                logger.info(f"Chrome option: {arg}")
+            # Update chrome binary location if provided
+            if self.chrome_path:
+                options.binary_location = self.chrome_path
 
-            driver = uc.Chrome(options=options)
+            # Initialize Chrome driver with version
+            driver = uc.Chrome(
+                options=options, version_main=119
+            )  # Adjust version number as needed
+
             driver.execute_script(
                 "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
             )
@@ -109,7 +111,6 @@ class TwitterScraper:
             driver.get("https://twitter.com/login")
             time.sleep(5)
 
-            # Take screenshot of login page for debugging
             self.take_error_screenshot(driver, "login_page")
 
             username_field = self.wait_and_find_element(
