@@ -66,9 +66,7 @@ class TwitterScraper:
                 options.binary_location = self.chrome_path
 
             # Initialize Chrome driver with version
-            driver = uc.Chrome(
-                options=options, version_main=119
-            )  # Adjust version number as needed
+            driver = uc.Chrome(options=options)  # Adjust version number as needed
 
             driver.execute_script(
                 "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
